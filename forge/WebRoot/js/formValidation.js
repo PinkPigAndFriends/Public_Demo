@@ -18,6 +18,7 @@ $(function(){
             state:{
                 required:true
             },
+          
             city:{
                 required:true
             },
@@ -71,7 +72,7 @@ $(function(){
             },
             email:{
                 required: "please input your email",
-                email: "E-mail format is incorrect"
+               
             },
             pwd:{
                 required: "Please enter your password",
@@ -98,24 +99,28 @@ $(function(){
         rules:{
             email:{
                 required:true,
-                email:true
             },
             password:{
                 required:true,
                 minlength:6,
                 maxlength:10
+            },  
+            slider_block:{
+            	 required:true
             }
         },
         messages:{
             email:{
                 required: "please input your email",
-                email: "E-mail format is incorrect"
             },
             password: {
                 required: "Please enter your password",
                 minlength: "Password length cannot be less than 6",
                 maxlength: "Password length cannot be greater than 10"
-            }
+            }, 
+            slider_block:{
+            	required: "Slide block"
+            },
         },
         onfocusout:function(e){
             $(e).valid();

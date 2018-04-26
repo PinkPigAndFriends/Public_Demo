@@ -46,8 +46,8 @@
                                 <ul class="header-top-style text-capitalize mr-25">
                                     <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="login.jsp">Login</a></li>
+                                            <li><a href="my-account.jsp">My Account</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -79,7 +79,7 @@
                             <div class="header-top-middle">
                                 <ul class="header-top-style">
                                     <li>
-                                        <a href="login.html">
+                                        <a href="login.jsp">
                                             <span>Login or Register</span>
                                         </a>
                                         <div class="ul-style login-register box-shadow white-bg p-30">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
                             <div class="header-logo text-center">
-                                <a href="index.html"><img alt="" src="images/logo.png"></a>
+                                <a href="index.jsp"><img alt="" src="images/logo.png"></a>
                             </div>
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
@@ -193,10 +193,10 @@
                         </div>
                         <nav class="primary-menu">
                             <ul class="header-top-style text-uppercase">
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li><a href="shop.html">shop</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="index.jsp">home</a></li>
+                                <li><a href="about.jsp">about</a></li>
+                                <li><a href="shop.jsp">shop</a></li>
+                                <li><a href="contact.jsp">contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -210,10 +210,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">home</a></li>
-										<li><a href="about.html">about</a></li>
-										<li><a href="shop.html">shop</a></li>
-										<li><a href="contact.html">contact</a></li>
+                                        <li><a href="index.jsp">home</a></li>
+										<li><a href="about.jsp">about</a></li>
+										<li><a href="shop.jsp">shop</a></li>
+										<li><a href="contact.jsp">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -233,7 +233,7 @@
                             <h5 class="breadcrumbs-disc m-0">Best Products for you</h5>
                             <h2 class="breadcrumbs-title text-black m-0">FORGE SHOP</h2>
                             <ul class="top-page">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.jsp">Home</a></li>
                                 <li>></li>
                                 <li>Shop</li>
                             </ul>
@@ -1314,7 +1314,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-top-content">
-                                <a href="index.html">
+                                <a href="index.jsp">
                                     <img src="images/footer/logo.png" alt="">
                                 </a>
                                 <p class="pb-30">Forge is the best ecommerce site lorem ipsum dolor sit amet, consectetur aiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
@@ -1369,9 +1369,9 @@
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">CONTACT</h5>
                                 <ul class="footer-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="index.jsp">Home</a></li>
+                                    <li><a href="about.jsp">About us</a></li>
+                                    <li><a href="contact.jsp">Contact us</a></li>
                                     <li><a href="#">Our blog</a></li>
                                     <li><a href="#">Support centre</a></li>
                                     <li><a href="#">Privacy policy</a></li>
@@ -1459,7 +1459,7 @@
                             <nav>
                                 <ul class="footer-bottom-menu">
                                     <li><a href="#">Site Map</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="contact.jsp">Contact Us</a></li>
                                     <li><a href="">Wish List</a></li>
                                     <li><a href="#">Newsletter</a></li>
                                 </ul>

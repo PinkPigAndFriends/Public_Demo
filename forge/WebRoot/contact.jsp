@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>My Account</title>
+    <title>Contact Us</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- All css files are included here -->
     <!-- Bootstrap fremwork main css -->
@@ -46,8 +46,8 @@
                                 <ul class="header-top-style text-capitalize mr-25">
                                     <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="login.jsp">Login</a></li>
+                                            <li><a href="my-account.jsp">My Account</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -79,7 +79,7 @@
                             <div class="header-top-middle">
                                 <ul class="header-top-style">
                                     <li>
-                                        <a href="login.html">
+                                        <a href="login.jsp">
                                             <span>Login or Register</span>
                                         </a>
                                         <div class="ul-style login-register box-shadow white-bg p-30">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
                             <div class="header-logo text-center">
-                                <a href="index.html"><img alt="" src="images/logo.png"></a>
+                                <a href="index.jsp"><img alt="" src="images/logo.png"></a>
                             </div>
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
@@ -193,10 +193,10 @@
                         </div>
                         <nav class="primary-menu">
                             <ul class="header-top-style text-uppercase">
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li><a href="shop.html">shop</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="index.jsp">home</a></li>
+                                <li><a href="about.jsp">about</a></li>
+                                <li><a href="shop.jsp">shop</a></li>
+                                <li><a href="contact.jsp">contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -210,10 +210,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">home</a></li>
-										<li><a href="about.html">about</a></li>
-										<li><a href="shop.html">shop</a></li>
-										<li><a href="contact.html">contact</a></li>
+                                        <li><a href="index.jsp">home</a></li>
+										<li><a href="about.jsp">about</a></li>
+										<li><a href="shop.jsp">shop</a></li>
+										<li><a href="contact.jsp">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -231,11 +231,11 @@
                     <div class="col-lg-12">
                         <div class="breadcrumbs-inner">
                             <h5 class="breadcrumbs-disc m-0">Best Products for you</h5>
-                            <h2 class="breadcrumbs-title text-black m-0">My Account </h2>
+                            <h2 class="breadcrumbs-title text-black m-0">Contact Us </h2>
                             <ul class="top-page">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.jsp">Home</a></li>
                                 <li>></li>
-                                <li>My Account</li>
+                                <li>Contact us</li>
                             </ul>
                         </div>
                     </div>
@@ -245,165 +245,63 @@
         <!-- End Breadcrumbs Area -->
         <!-- Start page content -->
         <section id="page-content" class="page-wrapper pt-10">
-            <!-- Start My Account -->
-            <div class="my-account-page section-padding">
+            <!-- Start Contact Us Top Area -->
+            <div class="contact-us-area pt-90">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="procced-checkout">
-                                <h4 class="procced-title text-uppercase pb-15 mb-20"><strong>Procced to Checkout</strong></h4>
-                                <p>Welcome to your account. Here you can manage all of your personal information and orders.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="addresses-lists">
-                            <div class="col-xs-12 col-sm-6 col-lg-6">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <i class="fa fa-home"></i>
-                                                   <span>个人信息</span>
-                                                </a>
-                                            </h4>
-                                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-contact-inner pull-left">
+                                <div class="text-center">
+                                    <div class="contact-us-icon mb-20">
+                                        <img src="images/contact/1.png" alt="">
                                     </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                                    <i class="fa fa-folder-o"></i>
-                                                   <span>修改密码</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingFour">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                                    <i class="fa fa-building"></i>
-                                                   <span>物流信息</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-lg-6">
-                                <div class="myaccount-link-list">                               
-                                    <div class="panel panel-default mb-5">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a  href="">
-                                                    <i class="fa fa-heart"></i>
-                                                    <span>My Love</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                    </div>
-									<div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                    <i class="fa fa-list-ol"></i>
-                                                   <span>个人账单</span>
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                <div class="coupon-info">
-                                                    <h6 class="procced-title text-uppercase pb-15 mb-20">Your addresses </h6>
-                                                </div>
-                                                <div class="theme-bg">
-                                                    <p class="alert text-white">You have not placed any orders.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="contact-inner">
+                                        <p>8901 Marmora Raod, </p>
+                                        <p>Glasgow, D04  89GR </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>            
-            <!-- End of My Account -->
-            <!-- Start Brand Area -->
-            <div class="brand-area section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title text-center mb-35">
-                                <h2 class="text-uppercase"><strong>OUR BRAND</strong></h2>
-                                <p class="text-defualt">BRAND</p>
-                                <img alt="" src="images/section-border.png">
+                        <div class="col-sm-4">
+                            <div class="single-contact-inner text-center">
+                                <div class="contact-us-icon mb-20">
+                                    <img src="images/contact/2.png" alt="">
+                                </div>
+                                <div class="contact-inner">
+                                    <p>Telephone : (801) 4256  9856 </p>
+                                    <p>Telephone : (801) 4256  9658 </p>
+                                </div>
                             </div>
-                            <div class="brand-carousel">
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/1.png" alt="">
-                                        </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single-contact-inner pull-right">
+                                <div class="text-center">
+                                    <div class="contact-us-icon mb-20">
+                                        <img src="images/contact/3.png" alt="">
                                     </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/2.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/3.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/4.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/5.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/1.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/2.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-brand text-center">
-                                        <a href="#">
-                                            <img src="images/brand/3.png" alt="">
-                                        </a>
-                                    </div>
+                                    <div class="contact-inner">
+                                        <p>Email : info@forge.com </p>
+                                        <p>Web : www.forge.com </p>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Brand Area -->
+            <!-- End Contact Us Top Area -->
+            <!-- Map Area Start -->
+            <div class="map-area mtb-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="googleMap" style="width:100%;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Area End -->
+            
         </section>
         <!-- End page content -->
         <!-- Start footer area -->
@@ -413,7 +311,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-top-content">
-                                <a href="index.html">
+                                <a href="index.jsp">
                                     <img src="images/footer/logo.png" alt="">
                                 </a>
                                 <p class="pb-30">Forge is the best ecommerce site lorem ipsum dolor sit amet, consectetur aiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
@@ -468,9 +366,9 @@
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">CONTACT</h5>
                                 <ul class="footer-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="index.jsp">Home</a></li>
+                                    <li><a href="about.jsp">About us</a></li>
+                                    <li><a href="contact.jsp">Contact us</a></li>
                                     <li><a href="#">Our blog</a></li>
                                     <li><a href="#">Support centre</a></li>
                                     <li><a href="#">Privacy policy</a></li>
@@ -558,7 +456,7 @@
                             <nav>
                                 <ul class="footer-bottom-menu">
                                     <li><a href="#">Site Map</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="contact.jsp">Contact Us</a></li>
                                     <li><a href="">Wish List</a></li>
                                     <li><a href="#">Newsletter</a></li>
                                 </ul>
@@ -585,6 +483,26 @@
     <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
     <!-- All js plugins included in this file. -->
     <script src="js/plugins.js"></script>
+    <!-- Google Map js -->
+    <!---<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+          var mapOptions = {
+            zoom: 16,
+            scrollwheel: false,
+            center: new google.maps.LatLng(23.763474, 90.431483)
+          };
+          var map = new google.maps.Map(document.getElementById('googleMap'),
+              mapOptions);
+          var marker = new google.maps.Marker({
+            position: map.getCenter(),
+            animation:google.maps.Animation.BOUNCE,
+            icon: 'images/contact/4.png',
+            map: map
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>--->
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
 

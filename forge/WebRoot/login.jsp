@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contact Us</title>
+    <title>Login / Register</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
 
     <!-- All css files are included here -->
     <!-- Bootstrap fremwork main css -->
@@ -22,11 +23,20 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- User style -->
     <link rel="stylesheet" href="css/custom.css">
-
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="css/slide-unlock.css" rel="stylesheet">
 
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="js/add.js"></script>
+    <style type="text/css">
+        .error{
+            color:gray;
+            font-weight: 100;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,8 +56,8 @@
                                 <ul class="header-top-style text-capitalize mr-25">
                                     <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="login.jsp">Login</a></li>
+                                            <li><a href="my-account.jsp">My Account</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -79,10 +89,10 @@
                             <div class="header-top-middle">
                                 <ul class="header-top-style">
                                     <li>
-                                        <a href="login.html">
+                                        <a href="login.jsp">
                                             <span>Login or Register</span>
                                         </a>
-                                        <div class="ul-style login-register box-shadow white-bg p-30">
+                                       <!--  <div class="ul-style login-register box-shadow white-bg p-30">
                                             <h6 class="mb-20"><strong>Login</strong></h6>
                                             <input type="text" name="s" class="pl-30" placeholder="user name" id="user-name">
                                             <input type="password" name="d" class="pl-30" placeholder="Password" id="password">
@@ -102,7 +112,7 @@
                                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </li>
                                 </ul>
                             </div>
@@ -129,7 +139,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
                             <div class="header-logo text-center">
-                                <a href="index.html"><img alt="" src="images/logo.png"></a>
+                                <a href="index.jsp"><img alt="" src="images/logo.png"></a>
                             </div>
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
@@ -193,10 +203,10 @@
                         </div>
                         <nav class="primary-menu">
                             <ul class="header-top-style text-uppercase">
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li><a href="shop.html">shop</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="index.jsp">home</a></li>
+                                <li><a href="about.jsp">about</a></li>
+                                <li><a href="shop.jsp">shop</a></li>
+                                <li><a href="contact.jsp">contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -210,10 +220,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">home</a></li>
-										<li><a href="about.html">about</a></li>
-										<li><a href="shop.html">shop</a></li>
-										<li><a href="contact.html">contact</a></li>
+                                        <li><a href="index.jsp">home</a></li>
+										<li><a href="about.jsp">about</a></li>
+										<li><a href="shop.jsp">shop</a></li>
+										<li><a href="contact.jsp">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -231,11 +241,11 @@
                     <div class="col-lg-12">
                         <div class="breadcrumbs-inner">
                             <h5 class="breadcrumbs-disc m-0">Best Products for you</h5>
-                            <h2 class="breadcrumbs-title text-black m-0">Contact Us </h2>
+                            <h2 class="breadcrumbs-title text-black m-0">Login / Register </h2>
                             <ul class="top-page">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.jsp">Home</a></li>
                                 <li>></li>
-                                <li>Contact us</li>
+                                <li>Login / Register</li>
                             </ul>
                         </div>
                     </div>
@@ -245,63 +255,181 @@
         <!-- End Breadcrumbs Area -->
         <!-- Start page content -->
         <section id="page-content" class="page-wrapper pt-10">
-            <!-- Start Contact Us Top Area -->
-            <div class="contact-us-area pt-90">
+            <!-- Start Register Area -->
+            <div class="register-area pt-90">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4">
-                            <div class="single-contact-inner pull-left">
-                                <div class="text-center">
-                                    <div class="contact-us-icon mb-20">
-                                        <img src="images/contact/1.png" alt="">
+                        <div class="col-md-6">
+                            <div class="registered-customers">
+                                <h4 class="text-uppercase mb-20"><strong>REGISTERED CUSTOMERS</strong></h4>
+                                <form action="user?method=login" id="login" method="post">
+                                    <div class="login-account p-30 box-shadow">
+                                        <p>If you have an account with us, Please log in.</p>
+                                        
+                                        <input type="text" placeholder="Email Address" name="email">
+                                        <%
+                                        String email=null;
+                                        Cookie[] cookies=request.getCookies();
+                            			if(cookies!=null){
+                            				for(Cookie c:cookies){
+                            					if(c.getName().equals("name")){
+                            						email=c.getValue();
+                            					}
+                            				}
+                            			}
+                                        %>
+                                        <input type="password" placeholder="Password" name="password">
+                                        <p><small><a href="#">Forgot our password?</a></small></p>
+                                        <input id="remember" type="checkbox" name="remember"><span id="remember me">remember me</span>   
+                                        <!-- 	滑块 -->
+                                        <div id="demo">
+											  <div id="slider">
+											    <div id="slider_bg"></div>
+											    <span id="label">>></span> <span id="labelTip">拖动滑块验证</span> </div>
+											  <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+											  <input type="hidden" id="slider_block" value="0" name="slider_block"/>
+											  <script src="js/jquery.slideunlock.js"></script> 
+											  <script>
+											    $(function () {
+											        var slider = new SliderUnlock("#slider",{
+															successLabelTip : "验证成功"	
+														},function(){
+															document.getElementById("slider_block").setAttribute("value", "100");
+											        	});
+											        slider.init();
+											    })
+											</script>
+										</div>
+										
+                                        <button type="submit" class="cart-button text-uppercase" id="aa">login</button>
                                     </div>
-                                    <div class="contact-inner">
-                                        <p>8901 Marmora Raod, </p>
-                                        <p>Glasgow, D04  89GR </p>
-                                    </div>
-                                </div>
+                                </form> 
+                                                
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="single-contact-inner text-center">
-                                <div class="contact-us-icon mb-20">
-                                    <img src="images/contact/2.png" alt="">
+                        <div class="col-md-6">
+                            <div class="registered-customers new-customers">
+                                <div class="section-title text-uppercase mb-40">
+                                    <h4>NEW CUSTOMERS</h4>
                                 </div>
-                                <div class="contact-inner">
-                                    <p>Telephone : (801) 4256  9856 </p>
-                                    <p>Telephone : (801) 4256  9658 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="single-contact-inner pull-right">
-                                <div class="text-center">
-                                    <div class="contact-us-icon mb-20">
-                                        <img src="images/contact/3.png" alt="">
+                                <form action="user?method=register" id="register" method="post">
+                                    <div class="login-account p-30 box-shadow">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="text" placeholder="First Name" name="firstName">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" placeholder="last Name" name="lastName">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" placeholder="Detailed Address..." name="address">
+                                            </div>
+                                        </div>
+                                        <input type="text" placeholder="Phone here..." name="phone">
+                                        <input type="text" placeholder="Email here..." name="email">
+                                        <input type="password" placeholder="Password" name="pwd">
+                                        <input type="password" placeholder="Confirm Password" name="repwd">
+                                        <div class="checkbox">
+                                            <label class="mr-10"> 
+                                                <small>
+                                                    <input type="checkbox" name="signup">Sign up for our newsletter!
+                                                </small>
+                                            </label>
+                                            <label> 
+                                                <small>
+                                                    <input type="checkbox" name="signup">Receive special offers from our partners!
+                                                </small>
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <button value="register" type="submit" class="cart-button text-uppercase mt-20">Register</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="reset" class="cart-button text-uppercase mt-20">Clear</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="contact-inner">
-                                        <p>Email : info@forge.com </p>
-                                        <p>Web : www.forge.com </p>
-                                    </div>                                    
-                                </div>
+                                </form>                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Contact Us Top Area -->
-            <!-- Map Area Start -->
-            <div class="map-area mtb-50">
+            <!-- End of Register Area -->
+            <!-- Start Brand Area -->
+            <div class="brand-area section-padding">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div id="googleMap" style="width:100%;height:400px;"></div>
+                            <div class="section-title text-center mb-35">
+                                <h2 class="text-uppercase"><strong>OUR BRAND</strong></h2>
+                                <p class="text-defualt">BRAND</p>
+                                <img alt="" src="images/section-border.png">
+                            </div>
+                            <div class="brand-carousel">
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/1.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/2.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/3.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/4.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/5.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/1.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/2.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="single-brand text-center">
+                                        <a href="#">
+                                            <img src="images/brand/3.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Map Area End -->
-            
+            <!-- End Brand Area -->
         </section>
         <!-- End page content -->
         <!-- Start footer area -->
@@ -311,7 +439,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-top-content">
-                                <a href="index.html">
+                                <a href="index.jsp">
                                     <img src="images/footer/logo.png" alt="">
                                 </a>
                                 <p class="pb-30">Forge is the best ecommerce site lorem ipsum dolor sit amet, consectetur aiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
@@ -366,9 +494,9 @@
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">CONTACT</h5>
                                 <ul class="footer-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="index.jsp">Home</a></li>
+                                    <li><a href="about.jsp">About us</a></li>
+                                    <li><a href="contact.jsp">Contact us</a></li>
                                     <li><a href="#">Our blog</a></li>
                                     <li><a href="#">Support centre</a></li>
                                     <li><a href="#">Privacy policy</a></li>
@@ -456,7 +584,7 @@
                             <nav>
                                 <ul class="footer-bottom-menu">
                                     <li><a href="#">Site Map</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="contact.jsp">Contact Us</a></li>
                                     <li><a href="">Wish List</a></li>
                                     <li><a href="#">Newsletter</a></li>
                                 </ul>
@@ -483,28 +611,11 @@
     <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
     <!-- All js plugins included in this file. -->
     <script src="js/plugins.js"></script>
-    <!-- Google Map js -->
-    <!---<script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-        function initialize() {
-          var mapOptions = {
-            zoom: 16,
-            scrollwheel: false,
-            center: new google.maps.LatLng(23.763474, 90.431483)
-          };
-          var map = new google.maps.Map(document.getElementById('googleMap'),
-              mapOptions);
-          var marker = new google.maps.Marker({
-            position: map.getCenter(),
-            animation:google.maps.Animation.BOUNCE,
-            icon: 'images/contact/4.png',
-            map: map
-          });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>--->
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/formValidation.js"></script>
 
 </body>
 

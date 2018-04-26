@@ -1,14 +1,18 @@
 ﻿<!doctype html>
+<%@page import="com.forge.bean.User"%>
+<%@page import="com.forge.dao.impl.UserDaoImpl"%>
+<%@page import="com.forge.dao.UserDao"%>
+<%@page import="com.forge.service.impl.UserServiceImpl"%>
+<%@page import="com.forge.service.UserService"%>
 <html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login / Register</title>
+    <title>My Account</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- All css files are included here -->
     <!-- Bootstrap fremwork main css -->
@@ -28,12 +32,6 @@
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <style type="text/css">
-        .error{
-            color:gray;
-            font-weight: 100;
-        }
-    </style>
 </head>
 
 <body>
@@ -53,8 +51,8 @@
                                 <ul class="header-top-style text-capitalize mr-25">
                                     <li><a href="#"><span class="mr-10">My Account</span><i class="fa fa-angle-down"></i></a>
                                         <ul class="ul-style my-account box-shadow white-bg">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
+                                            <li><a href="login.jsp">Login</a></li>
+                                            <li><a href="my-account.jsp">My Account</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -86,7 +84,7 @@
                             <div class="header-top-middle">
                                 <ul class="header-top-style">
                                     <li>
-                                        <a href="login.html">
+                                        <a href="login.jsp">
                                             <span>Login or Register</span>
                                         </a>
                                         <div class="ul-style login-register box-shadow white-bg p-30">
@@ -136,7 +134,7 @@
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-12">
                             <div class="header-logo text-center">
-                                <a href="index.html"><img alt="" src="images/logo.png"></a>
+                                <a href="index.jsp"><img alt="" src="images/logo.png"></a>
                             </div>
                         </div>
                         <div class="col-md-offset-0 col-md-5 col-sm-offset-0 col-sm-4 col-xs-offset-3 col-xs-6">
@@ -200,10 +198,10 @@
                         </div>
                         <nav class="primary-menu">
                             <ul class="header-top-style text-uppercase">
-                                <li><a href="index.html">home</a></li>
-                                <li><a href="about.html">about</a></li>
-                                <li><a href="shop.html">shop</a></li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="index.jsp">home</a></li>
+                                <li><a href="about.jsp">about</a></li>
+                                <li><a href="shop.jsp">shop</a></li>
+                                <li><a href="contact.jsp">contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -217,10 +215,10 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="index.html">home</a></li>
-										<li><a href="about.html">about</a></li>
-										<li><a href="shop.html">shop</a></li>
-										<li><a href="contact.html">contact</a></li>
+                                        <li><a href="index.jsp">home</a></li>
+										<li><a href="about.jsp">about</a></li>
+										<li><a href="shop.jsp">shop</a></li>
+										<li><a href="contact.jsp">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -238,11 +236,11 @@
                     <div class="col-lg-12">
                         <div class="breadcrumbs-inner">
                             <h5 class="breadcrumbs-disc m-0">Best Products for you</h5>
-                            <h2 class="breadcrumbs-title text-black m-0">Login / Register </h2>
+                            <h2 class="breadcrumbs-title text-black m-0">My Account </h2>
                             <ul class="top-page">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.jsp">Home</a></li>
                                 <li>></li>
-                                <li>Login / Register</li>
+                                <li>My Account</li>
                             </ul>
                         </div>
                     </div>
@@ -252,101 +250,93 @@
         <!-- End Breadcrumbs Area -->
         <!-- Start page content -->
         <section id="page-content" class="page-wrapper pt-10">
-            <!-- Start Register Area -->
-            <div class="register-area pt-90">
+            <!-- Start My Account -->
+            <div class="my-account-page section-padding">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="registered-customers">
-                                <h4 class="text-uppercase mb-20"><strong>REGISTERED CUSTOMERS</strong></h4>
-                                <form action="#" id="login" method="post">
-                                    <div class="login-account p-30 box-shadow">
-                                        <p>If you have an account with us, Please log in.</p>
-                                        <input type="text" placeholder="Email Address" name="email">
-                                        <input type="password" placeholder="Password" name="password">
-                                        <p><small><a href="#">Forgot our password?</a></small></p>
-                                        <button type="submit" class="cart-button text-uppercase">login</button>
-                                    </div>
-                                </form>                                
+                        <div class="col-md-12">
+                            <div class="procced-checkout">
+                                <h4 class="procced-title text-uppercase pb-15 mb-20"><strong>Procced to Checkout</strong></h4>
+                                <p>Welcome to your account. Here you can manage all of your personal information and orders.</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="registered-customers new-customers">
-                                <div class="section-title text-uppercase mb-40">
-                                    <h4>NEW CUSTOMERS</h4>
+                    </div>
+                    <div class="row">
+                        <div class="addresses-lists">
+                            <div class="col-xs-12 col-sm-6 col-lg-6">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <i class="fa fa-home"></i>
+                                                    <span>个人信息</span>
+														
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                    <i class="fa fa-folder-o"></i>
+                                                   <span>修改密码</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                    <i class="fa fa-building"></i>
+                                                   <span>物流信息</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <form action="#" id="register" method="post">
-                                    <div class="login-account p-30 box-shadow">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="First Name" name="firstName">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="last Name" name="lastName">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select" name="country">
-                                                    <option value="defalt">Country</option>
-                                                    <option value="c-1">Australia</option>
-                                                    <option value="c-2">China</option>
-                                                    <option value="c-3">Unitd States</option>
-                                                    <option value="c-4">Unitd Kingdom</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select" name="state">
-                                                    <option value="defalt">State</option>
-                                                    <option value="c-1">Melbourne</option>
-                                                    <option value="c-2">Beijing</option>
-                                                    <option value="c-3">New York</option>
-                                                    <option value="c-4">London</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <select class="custom-select" name="city">
-                                                    <option value="defalt">Town/City</option>
-                                                    <option value="c-1">Victoria</option>
-                                                    <option value="c-2">Beijing</option>
-                                                    <option value="c-3">Boston</option>
-                                                    <option value="c-4">Cambridge</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <input type="text" placeholder="Detailed Address..." name="address">
-                                            </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-6">
+                                <div class="myaccount-link-list">                               
+                                    <div class="panel panel-default mb-5">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a  href="">
+                                                    <i class="fa fa-heart"></i>
+                                                    <span>My Love</span>
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <input type="text" placeholder="Phone here..." name="phone">
-                                        <input type="text" placeholder="Email here..." name="email">
-                                        <input type="password" placeholder="Password" name="pwd">
-                                        <input type="password" placeholder="Confirm Password" name="repwd">
-                                        <div class="checkbox">
-                                            <label class="mr-10"> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Sign up for our newsletter!
-                                                </small>
-                                            </label>
-                                            <label> 
-                                                <small>
-                                                    <input type="checkbox" name="signup">Receive special offers from our partners!
-                                                </small>
-                                            </label>
+                                    </div>
+									<div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                    <i class="fa fa-list-ol"></i>
+                                                   <span>个人账单</span>
+                                                </a>
+                                            </h4>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <button value="register" type="submit" class="cart-button text-uppercase mt-20">Register</button>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <button type="reset" class="cart-button text-uppercase mt-20">Clear</button>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <div class="coupon-info">
+                                                    <h6 class="procced-title text-uppercase pb-15 mb-20">Your addresses </h6>
+                                                </div>
+                                                <div class="theme-bg">
+                                                    <p class="alert text-white">You have not placed any orders.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </form>                                
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End of Register Area -->
+            </div>            
+            <!-- End of My Account -->
             <!-- Start Brand Area -->
             <div class="brand-area section-padding">
                 <div class="container">
@@ -429,7 +419,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-top-content">
-                                <a href="index.html">
+                                <a href="index.jsp">
                                     <img src="images/footer/logo.png" alt="">
                                 </a>
                                 <p class="pb-30">Forge is the best ecommerce site lorem ipsum dolor sit amet, consectetur aiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
@@ -484,9 +474,9 @@
                             <div class="single-footer-inner">
                                 <h5 class="footer-title text-white">CONTACT</h5>
                                 <ul class="footer-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="index.jsp">Home</a></li>
+                                    <li><a href="about.jsp">About us</a></li>
+                                    <li><a href="contact.jsp">Contact us</a></li>
                                     <li><a href="#">Our blog</a></li>
                                     <li><a href="#">Support centre</a></li>
                                     <li><a href="#">Privacy policy</a></li>
@@ -574,7 +564,7 @@
                             <nav>
                                 <ul class="footer-bottom-menu">
                                     <li><a href="#">Site Map</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="contact.jsp">Contact Us</a></li>
                                     <li><a href="">Wish List</a></li>
                                     <li><a href="#">Newsletter</a></li>
                                 </ul>
@@ -603,9 +593,6 @@
     <script src="js/plugins.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
-
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/formValidation.js"></script>
 
 </body>
 
